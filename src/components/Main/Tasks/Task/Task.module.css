@@ -1,0 +1,93 @@
+.div {
+  position: relative;
+  margin: 15px auto;
+  max-width: 300px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .33);
+  animation: showItPlease .2s both ease-in;
+}
+
+.listItem {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  min-height: 50px;
+  cursor: pointer;
+}
+
+
+.listItem::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: calc(100% - 5px);
+  border-radius: 4px 0 0 4px;
+}
+
+.pending.listItem::after{
+  background-color: orange;
+}
+
+.done.listItem::after {
+  background-color: green;
+}
+
+.details {
+  width: 85%;
+}
+
+.taskTitle {
+  padding-bottom: 7px;
+  font-size: 1.2em;
+}
+
+.pending.taskTitle {
+  color: orange;
+}
+
+.done.taskTitle {
+  color: green;
+}
+
+.taskDescription {
+  overflow-wrap: break-word;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+.taskEst {
+  font-size: .7em;
+  font-weight: 200;
+}
+
+.delete {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 7px;
+  font-size: 0.8em;
+  color: #dc3545;
+  border: 1px solid;
+  border-bottom: none;
+  border-right: none;
+  border-radius: 7px 0 4px 0;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.delete:hover {
+  color: white;
+  background-color: #dc3545;
+}
+
+@keyframes showItPlease {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

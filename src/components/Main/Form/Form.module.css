@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+
+.title {
+  align-self: center;
+  font-weight: 400;
+}
+
+.addTask {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.taskTitle,
+.taskDescription {
+  margin: 15px 0;
+  flex-basis: 100%;
+  max-width: 300px;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+  transition: 0.2s;
+}
+
+.taskTitle:focus
+.taskDescription:focus {
+  border-bottom-color: #23B1FF;
+}
+
+.time {
+  flex-basis: 25%;
+  padding: 3px;
+  border:none;
+}
+
+.submit {
+  margin-left: auto;
+  padding: 5px 10px;
+  font-size: 1.2em;
+  color: white;
+  background-color: #23B1FF;
+  border: none;
+  border-radius: 4px;
+}
+

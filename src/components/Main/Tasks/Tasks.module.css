@@ -1,0 +1,56 @@
+.tasksWrapper {
+  width: 100%;
+}
+
+.tasksTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 5px 0;
+  width: 100%;
+  border-bottom: 1px solid;
+}
+
+
+.title {
+  padding-left: 15px;
+  font-size: .9em;
+  font-weight: 300;
+}
+
+.score {
+  font-size: 2em;
+  padding-right: 15px;
+}
+
+.pending {
+  color: orange;
+}
+
+.done {
+  color: green;
+}
+
+.tasksContainer {
+  width: 100%;
+  max-width: 1200px;
+  list-style: none;
+}
+
+.noMoreTasks {
+  text-align: center;
+  margin: 20px auto;
+}
+
+@media (min-width: 500px) {
+  .tasksTitle {
+  justify-content: space-around;
+    
+  }
+}
+@media (min-width: 850px) {
+  .tasksWrapper {
+    width: 50%;
+    max-width: 700px;
+  }
+}

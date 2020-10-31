@@ -1,0 +1,60 @@
+.container {
+  position: relative;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  margin: -30px auto 0;
+  /* height: 600px; */
+  background-color: #fff;
+  min-width: 320px;
+  max-width: 800px;
+  width: 80%;
+  border-radius: 4px;
+}
+
+.addBtn {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.addBtn img {
+  width: 100%;
+  border-radius: 50%;
+
+  border: 1px solid white;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+}
+
+.tasks {
+  margin: 10px 0;
+  flex-basis: 100%;
+  height: 150px;
+  background-color: #dddddd;
+}
+
+.noTasks {
+  width: 100%;
+  margin-top: 30px;
+  padding: 30px;
+  text-align: center;
+}
+
+@media (min-width: 850px) {
+  .container {
+    padding-top: 100px;
+    justify-content: center;
+  }
+  .addBtn {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+ 
+  }
+}
