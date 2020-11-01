@@ -8,6 +8,8 @@ import Modal from '../common/Modal/Modal';
 import Form from './Form/Form';
 import Navigation from './Navigation/Navigation';
 
+const filterBy = (status, createdAt) => status && moment(createdAt).format('L') === moment(date).format('L');
+
 const Main = ({ date, handleDay }) => {
   const [tasks, setTasks] = useState([]);
   const [done, setDone] = useState([]);
@@ -16,7 +18,6 @@ const Main = ({ date, handleDay }) => {
 
 
   useEffect(() => {
-    const filterBy = (status, createdAt) => status && moment(createdAt).format('L') === moment(date).format('L');
     setDone(tasks.filter(task => filterBy(task.accomplished, task.createdAt)));
     setPending(tasks.filter(task => filterBy(!task.accomplished, task.createdAt)));
   }, [tasks, date, filterBy]);
