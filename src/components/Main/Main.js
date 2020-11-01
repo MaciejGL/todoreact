@@ -19,7 +19,7 @@ const Main = ({ date, handleDay }) => {
   useEffect(() => {
     setDone(tasks.filter(task => filterBy(task.accomplished, task.createdAt)));
     setPending(tasks.filter(task => filterBy(!task.accomplished, task.createdAt)));
-  }, [tasks, date]);
+  }, [tasks, date, filterBy]);
 
   const handleAddNewTask = task => setTasks([...tasks, task]);
 
