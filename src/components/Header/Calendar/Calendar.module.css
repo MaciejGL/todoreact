@@ -1,0 +1,31 @@
+.dateContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  padding-left: 8px;
+  color: white;
+}
+
+.day {
+  font-size: 2.5em;
+}
+
+.dateInnerContainer {
+  padding-top: 8px;
+  width: 66%;
+}
+
+.month {
+  padding-top: 0;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.year {
+  padding-top: 4px;
+  font-size: 0.7em;
+  font-weight: 200;
+}
+.weekday {
+  padding-top: 3px;
+}

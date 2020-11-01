@@ -3,12 +3,12 @@ import React from 'react';
 import styles from './Modal.module.css';
 import closeIcon from '../../../assets/close.png';
 
-const Modal = ({ children, closeModal }) => (
+const Modal = ({ children, toggleModal }) => (
   <>
-    <div onClick={closeModal} className={styles.background}>
+    <div onClick={toggleModal} className={styles.background}>
     </div>
     <div className={styles.frame}>
-      <img onClick={closeModal} className={styles.closeBtn} src={closeIcon} alt="close icon" />
+      <img onClick={toggleModal} className={styles.closeBtn} src={closeIcon} alt="close icon" />
       {children}
     </div>
   </>

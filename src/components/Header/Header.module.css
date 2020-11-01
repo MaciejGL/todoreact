@@ -1,54 +1,22 @@
 .headerContainer {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 170px;
-  padding: 0 5px;
+  justify-content: center;
+  padding: 10px 5px 50px;
   background-color: #23B1FF;
 }
 
-.dateContainer {
+.wrapper {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 5px;
-  padding-left: 8px;
-  color: white;
-}
-
-.day {
-  font-size: 3.5em;
-}
-
-.dateInnerContainer {
-  padding-top: 8px;
-}
-
-.month {
-  padding-top: 0;
-  font-size: 1.4em;
-  font-weight: 400;
-}
-
-.year {
-  padding-top: 4px;
-  font-size: 0.9em;
-  font-weight: 200;
-}
-.weekday {
-  padding-top: 3px;
-  flex-basis: 100%;
+  justify-content: center;
 }
 
 .headerContainer img {
-  height: 65px;
+  height: 55px;
 }
-@media (min-width: 500px) {
-  .headerContainer {
-    padding-top: 30px;
-    justify-content: center;
-  }
-  .dateContainer {
-    margin-right: 100px;
-  }
 
+.btnsContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }

@@ -1,0 +1,27 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.addBtn {
+  padding: 12px 14px;
+  font-size: 2em;
+  color: #23B1FF;
+  background-color: #23B1FF;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+}
+
+.addBtn path {
+  fill: #fff;
+}
+
+@media (min-width: 850px) {
+  .navigation {
+    margin-top: -30px;
+  }
+}

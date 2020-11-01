@@ -18,10 +18,12 @@ const Task = ({ task, toggleTaskStatus, removeTask }) => {
   }
 
   const deleteBtn = status
-    && <FontAwesomeIcon
-      onClick={() => removeTask(task.id)}
-      className={styles.delete}
-      icon={faTrashAlt} />;
+    && (
+      <FontAwesomeIcon
+        onClick={() => removeTask(task.id)}
+        className={styles.delete}
+        icon={faTrashAlt} />
+    );
 
   return (
     <div className={styles.div}>

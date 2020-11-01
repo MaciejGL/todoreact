@@ -23,8 +23,9 @@ const Tasks = ({
         <span className={styles.score}>{tasks.length}</span>
       </p>
       <ul className={styles.tasksContainer}>
-        {(tasks.length < 1 && title === 'Pending') && <p className={styles.noMoreTasks}>No more pending tasks.</p>}
-        {(tasks.length < 1 && title === 'Done') && <p className={styles.noMoreTasks}>It's about the time to accomplish something.</p>}
+        {(tasks.length < 1 && title === 'Pending') && <p className={styles.noMoreTasks}>Let&apos;s plan something.</p>}
+        {(tasks.length < 1 && title === 'Done')
+          && <p className={styles.noMoreTasks}>Nothing accomplished yet.</p>}
         {tasksJsx}
       </ul>
     </div>
