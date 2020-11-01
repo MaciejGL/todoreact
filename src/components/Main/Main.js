@@ -14,9 +14,9 @@ const Main = ({ date, handleDay }) => {
   const [pending, setPending] = useState([]);
   const [openModal, setOpenModal] = useState(false);
 
-  const filterBy = (status, createdAt) => status && moment(createdAt).format('L') === moment(date).format('L');
 
   useEffect(() => {
+    const filterBy = (status, createdAt) => status && moment(createdAt).format('L') === moment(date).format('L');
     setDone(tasks.filter(task => filterBy(task.accomplished, task.createdAt)));
     setPending(tasks.filter(task => filterBy(!task.accomplished, task.createdAt)));
   }, [tasks, date, filterBy]);
