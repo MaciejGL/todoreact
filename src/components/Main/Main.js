@@ -8,19 +8,16 @@ import Modal from '../common/Modal/Modal';
 import Form from './Form/Form';
 import Navigation from './Navigation/Navigation';
 
-const filterBy = (status, createdAt) => status && moment(createdAt).format('L') === moment(date).format('L');
-
 const Main = ({ date, handleDay }) => {
   const [tasks, setTasks] = useState([]);
   const [done, setDone] = useState([]);
   const [pending, setPending] = useState([]);
   const [openModal, setOpenModal] = useState(false);
 
-
   useEffect(() => {
-    setDone(tasks.filter(task => filterBy(task.accomplished, task.createdAt)));
-    setPending(tasks.filter(task => filterBy(!task.accomplished, task.createdAt)));
-  }, [tasks, date, filterBy]);
+    setDone(tasks.filter(task => task.accomplished && moment(task.createdAt).format('L') === moment(date).format('L')));
+    setPending(tasks.filter(task => !task.accomplished && moment(task.createdAt).format('L') === moment(date).format('L')));
+  }, [tasks, date]);
 
   const handleAddNewTask = task => setTasks([...tasks, task]);
 
